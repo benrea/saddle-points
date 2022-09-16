@@ -1,8 +1,12 @@
 module.exports = {
+  plugins: ['prettier', 'jest'],
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
+  },
+  rules: {
+    'prettier/prettier': 'error',
   },
   overrides: [
     // Student provided files
@@ -35,4 +39,4 @@ module.exports = {
       extends: '@exercism/eslint-config-typescript/maintainers',
     },
   ],
-}
+};
